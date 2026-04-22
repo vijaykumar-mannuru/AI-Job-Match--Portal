@@ -1,95 +1,204 @@
-# Job Portal App with MERN Stack
+# 🚀 AI Job Portal (MERN Stack)
 
-A comprehensive job portal application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. This application allows users to browse job listings, apply for jobs, and manage their applications seamlessly.
+An **AI-powered Job Portal Application** built using the MERN stack (MongoDB, Express.js, React.js, Node.js) that intelligently connects job seekers with recruiters by analyzing skills, resumes, and job requirements.
 
-## Features
+---
 
-- **User Authentication:** Secure authentication using JWT (JSON Web Tokens) for both job seekers and employers.
-- **Job Listings:** Browse through a wide range of job listings fetched from MongoDB.
-- **Application Management:** Job seekers can manage their job applications, and employers can view and manage received applications.
-- **Responsive Design:** Ensures a seamless experience across all devices.
+## 🎯 Problem Statement
 
-## Technologies Used
+Traditional job portals require users to manually search and apply for jobs, often resulting in poor matches and wasted effort.
 
-- **Frontend:** React.js, React Router, Bootstrap
-- **Backend:** Node.js, Express.js, MongoDB
-- **Authentication:** JWT (JSON Web Tokens), Bcrypt (for password hash)
-- **Image Upload:** Cloudinary for storing and managing uploaded images
-- **Deployment:** Vercel (frontend), Render(backend), MongoDB Atlas (database)
+---
 
-## Getting Started
+## 💡 Solution
 
-To get a local copy up and running follow these simple steps.
+This application introduces an **AI-based job matching system** that:
 
-### Prerequisites
+* Automatically analyzes resumes
+* Matches candidates with relevant jobs
+* Provides skill gap insights
 
-- Node.js installed on your machine with latest version or v22.2.0 above
-- MongoDB Atlas account (or local MongoDB server)
-- Cloudinary account for image storage
+---
 
-### Installation
+## 🔥 Key Features
 
-1. Clone the repo:
-   ```sh
-   git clone https://github.com/exclusiveabhi/react-job-portal.git
-   ```
-2. Install NPM packages:
+### 👤 User & Recruiter Authentication
 
-   ```sh
-   cd react-job-portal
-   cd backend
-   npm install
-   cd..
-   cd frontend
-   npm install
-   ```
+* Secure login/signup using **JWT**
+* Role-based access (Job Seeker / Recruiter)
 
-3. ## If you don't want to change the`.env` credentials skip step 4 and move to step 5.
+### 📄 Resume Management
 
-4. Set up environment variables:
+* Upload resumes (PDF/Image)
+* Cloud storage using **Cloudinary**
 
-   - Create a `config.env` file after creating a `config folder` in the backend directory, containing the following variables:
+### 🤖 AI Job Matching System
 
-   ```env
-   PORT=
-   CLOUDINARY_API_KEY=
-   CLOUDINARY_API_SECRET=
-   CLOUDINARY_CLOUD_NAME=
-   FRONTEND_URL=
-   DB_URL=
-   JWT_SECRET_KEY=
-   JWT_EXPIRE=
-   COOKIE_EXPIRE=
-   ```
+* Extracts skills from resumes
+* Matches with job descriptions
+* Generates match score
+* Suggests missing skills
 
-   Replace each value with your specific configuration details.
+### 💼 Job Management
 
-5. Run the application backend (make sure you are in `/backend` directory) :
+* Recruiters can post, update, delete jobs
+* Users can browse & apply for jobs
 
-   ```sh
-   node server.js
-   ```
+### 📊 Dashboard & Analytics
 
-6. Run the application frontend (make sure you are in `/frontend` directory) :
-   ```sh
-   npm run dev
-   ```
-7. Open your browser and navigate to `http://localhost:5173` to view the app.
+* Application tracking
+* Job insights for recruiters
+* User activity overview
 
-## Contributing
+### 🔔 Notifications (Optional Enhancement)
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+* Job alerts
+* Application status updates
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request (`we will merge within 24 hour`)
+### 📱 Responsive UI
 
-## Please give a star ⭐ to the repository if you like it.
+* Works smoothly on mobile, tablet, and desktop
 
-## Contact
+---
 
-Abhishek Rajput - [GitHub](https://github.com/exclusiveabhi)
+## 🛠️ Tech Stack
 
-Project Link: [https://github.com/exclusiveabhi/react-job-portal.git](https://github.com/exclusiveabhi/react-job-portal.git)
+### Frontend
+
+* React.js
+* React Router
+* Bootstrap / Tailwind CSS
+
+### Backend
+
+* Node.js
+* Express.js
+
+### Database
+
+* MongoDB (Atlas)
+
+### Authentication
+
+* JWT (JSON Web Tokens)
+* Bcrypt (Password Hashing)
+
+### File Storage
+
+* Cloudinary
+
+### Deployment
+
+* Frontend: Vercel
+* Backend: Render
+* Database: MongoDB Atlas
+
+---
+
+## 🏗️ System Architecture (High-Level)
+
+User → React UI → Express API → MongoDB
+             ↓
+          Cloudinary (Resume Storage)
+             ↓
+          AI Matching Logic
+
+---
+
+## ⚙️ Getting Started
+
+### 🔧 Prerequisites
+
+* Node.js (v18+ recommended)
+* MongoDB Atlas account
+* Cloudinary account
+
+---
+
+### 📥 Installation
+
+```bash
+git clone https://github.com/exclusiveabhi/react-job-portal.git
+cd react-job-portal
+```
+
+### Backend Setup
+
+```bash
+cd backend
+npm install
+```
+
+Create `.env` file:
+
+```
+PORT=
+DB_URL=
+JWT_SECRET_KEY=
+JWT_EXPIRE=
+COOKIE_EXPIRE=
+
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+CLOUDINARY_CLOUD_NAME=
+
+FRONTEND_URL=
+```
+
+Run backend:
+
+```bash
+node server.js
+```
+
+---
+
+### Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+### 🌐 Run Application
+
+Open:
+👉 http://localhost:5173
+
+---
+
+## 📈 Future Enhancements
+
+* 🔍 Advanced AI (NLP-based resume parsing)
+* 📬 Email notifications
+* 💬 Real-time chat (Recruiter ↔ Candidate)
+* 📊 Advanced analytics dashboard
+
+---
+
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+```bash
+git checkout -b feature/AmazingFeature
+git commit -m "Add AmazingFeature"
+git push origin feature/AmazingFeature
+```
+
+---
+
+## ⭐ Support
+
+If you like this project:
+👉 Give a **star ⭐ on GitHub**
+
+---
+
+## 👨‍💻 Author
+
+Developed with ❤️ using MERN Stack
